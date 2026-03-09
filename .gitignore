@@ -136,9 +136,11 @@ celerybeat.pid
 
 # Environments
 .env
+.myenv
 .envrc
 .venv
 numpy-env
+myenv/
 env/
 venv/
 ENV/
