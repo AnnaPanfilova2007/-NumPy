@@ -13,6 +13,7 @@ import tempfile
 import numpy as np
 import pandas as pd
 import matplotlib
+
 matplotlib.use('Agg')  # Отключаем отображение графиков
 import matplotlib.pyplot as plt
 
@@ -171,7 +172,7 @@ class TestVectorOperations(unittest.TestCase):
     def test_dot_product(self):
         """Тест скалярного произведения."""
         result = dot_product(self.vec1, self.vec2)
-        expected = 1*4 + 2*5 + 3*6
+        expected = 1 * 4 + 2 * 5 + 3 * 6
         self.assertEqual(result, expected)
 
 
@@ -191,7 +192,7 @@ class TestMatrixOperations(unittest.TestCase):
     def test_matrix_determinant(self):
         """Тест определителя матрицы."""
         result = matrix_determinant(self.mat1)
-        expected = 1*4 - 2*3
+        expected = 1 * 4 - 2 * 3
         self.assertAlmostEqual(result, expected)
 
     def test_matrix_inverse(self):
@@ -262,8 +263,8 @@ class TestVisualization(unittest.TestCase):
         """Подготовка данных."""
         self.data = np.random.normal(75, 10, 100)
         self.corr_matrix = np.array([[1.0, 0.5, 0.3],
-                                      [0.5, 1.0, 0.6],
-                                      [0.3, 0.6, 1.0]])
+                                     [0.5, 1.0, 0.6],
+                                     [0.3, 0.6, 1.0]])
         self.x = np.arange(1, 11)
         self.y = np.random.randint(60, 100, 10)
 
@@ -293,5 +294,3 @@ class TestVisualization(unittest.TestCase):
             self.assertTrue(True)
         except Exception as e:
             self.fail(f"plot_line вызвал исключение: {e}")
-
-

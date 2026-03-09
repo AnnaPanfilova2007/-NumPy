@@ -305,4 +305,5 @@ def plot_line(x: [np.ndarray], y: [np.ndarray]):
 
 if __name__ == "__main__":
     dat = load_dataset()
+    plot_histogram(dat)
     plot_line(create_vector(1, len(transpose_matrix(dat)[0]) + 1), transpose_matrix(dat)[0])
